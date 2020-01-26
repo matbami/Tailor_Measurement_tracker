@@ -86,8 +86,17 @@ const MeasureSchema = new mongoose.Schema({
             type:Number
         },
         
+    },
+
+    tailor:{
+        type: mongoose.Schema.Types.ObjectId,
+        required:true,
+        ref:'Tailor'
     }
+
+
 })
+
 const Measure = mongoose.model('Measure' , MeasureSchema)
 
 
